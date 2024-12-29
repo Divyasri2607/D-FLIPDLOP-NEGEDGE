@@ -43,33 +43,16 @@ For different input combinations generate the timing diagram.
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 ```
-module sr_ff(s,r,clk,q,qbar);
+module d_ff(d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
 
-input s,r,clk;
-
-output reg q;
-
-output reg qbar;
-
-initial 
-
-begin
-
-q=0;
-
-qbar=1;
-
-end
-
-always @(posedge clk)
-
-begin
-
-   q=s|(~r&q);
-   
-   qbar=r|(~s&~q);
-end
-
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else
+      q <= d; // D input is passed to Q on the negative clock edge
+  end
 endmodule
 ```
 ```
@@ -81,11 +64,13 @@ RegisterNumber:24901155
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
-![WhatsApp Image 2024-12-13 at 15 39 03_9cc38972](https://github.com/user-attachments/assets/cf6b6def-6350-4a8c-83c6-048ee14c66f7)
+![Screenshot 2024-12-29 173717](https://github.com/user-attachments/assets/e1b6f0b3-b2f1-4c35-9b9d-74da849916ff)
+
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![WhatsApp Image 2024-12-13 at 15 39 03_e55ddc17](https://github.com/user-attachments/assets/a16cc69a-a140-45c2-8949-09395712ec41)
+
+![Screenshot 2024-12-29 173733](https://github.com/user-attachments/assets/5c2dc4f4-3470-4c9e-9545-fea34464dd25)
 
 
 **RESULTS**
