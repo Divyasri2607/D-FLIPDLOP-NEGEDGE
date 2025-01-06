@@ -1,12 +1,12 @@
-# D-FLIPDLOP-NEGEDGE
+# D-FLIP FLOP-NEGEDGE
 
 **AIM:**
 
-To implement  D flipflop using verilog and validating their functionality using their functional tables
+To implement D flipflop using verilog and validating their functionality using their functional tables
 
 **SOFTWARE REQUIRED:**
 
-Quartus prime
+Quartus prime II
 
 **THEORY**
 
@@ -28,22 +28,18 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
-Type the program in Quartus software.
-
-Compile and run the program.
-
-Generate the RTL schematic and save the logic diagram.
-
-Create nodes for inputs and outputs to generate the timing diagram.
-
-For different input combinations generate the timing diagram.
-
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
+   
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+D-FLIP FLOP WITH NEGATIVE EDGE TRIGGER:
+
 ```
-module d_ff(d, clk, rst, q);
+module d_ff_neg_edge (d, clk, rst, q);
   input d, clk, rst;
   output reg q;
 
@@ -55,23 +51,17 @@ module d_ff(d, clk, rst, q);
   end
 endmodule
 ```
-```
+Developed by: Divya Sri V RegisterNumber: 24901155
 
-*/
-Developed by:V.Divya Sri 
-RegisterNumber:24901155
-```
-*/
+**RTL LOGIC FOR D-FLIPFLOP**
 
-**RTL LOGIC FOR FLIPFLOPS**
-![Screenshot 2024-12-29 173717](https://github.com/user-attachments/assets/e1b6f0b3-b2f1-4c35-9b9d-74da849916ff)
+![Screenshot 2024-12-22 233844](https://github.com/user-attachments/assets/bc4ed6ea-5048-4bf2-aee9-15977cb98f55)
 
 
+**TIMING DIAGRAM FOR D-FLIPFLOP**
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+![Screenshot 2024-12-23 094004](https://github.com/user-attachments/assets/2a649679-ea72-4977-9aca-e6b37fd09625)
 
-![Screenshot 2024-12-29 173733](https://github.com/user-attachments/assets/5c2dc4f4-3470-4c9e-9545-fea34464dd25)
+**RESULT**
 
-
-**RESULTS**
-successfully implemented D flipflop using verilog and validating their functionality using their functional tables
+Hence designed a D-Flip Flop using verilog and validated their functionality using their functional tables.
